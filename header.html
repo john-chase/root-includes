@@ -1,9 +1,10 @@
- <!--printenv -->
+<!--printenv -->
+<!--#echo var="DOCUMENT_URI"--> 
 <!-- PROD: /home/thearto4/public_html/PROJECTS -->
 <!-- DEV: /Volumes/Chases/theARTofTECH --> 
 <header class="sticky-top"> 
-<!--#if expr="\"$DOCUMENT_ROOT\" = \"/Volumes/Chases/theARTofTECH\"" --> 
     <img id="logo" src="/site-images/logo-325.png" width="60" height="60" alt="Art of Tech Business logo">
+<!--#if expr="\"$DOCUMENT_ROOT\" = \"/Volumes/Chases/theARTofTECH\"" --> 
     <!--#if expr="\"$DOCUMENT_URI\" = \"/PROJECTS/index.html\"" --> 
     <h1>The Art of Tech Projects 2022</h1>
     <!--#elif expr="\"$DOCUMENT_URI\" = \"/PROJECTS/api/test/index.html\"" --> 
@@ -18,7 +19,6 @@
     <h1>Advanced Expedition Search</h1>
     <!--#endif -->    
 <!--#else -->
-    <img id="logo" src="site-images/logo-325.png" width="60" height="60" alt="Art of Tech Business logo">
     <!--#if expr="\"$DOCUMENT_URI\" = \"index.html\"" --> 
     <h1>The Art of Tech Projects 2022</h1>
     <!--#elif expr="\"$DOCUMENT_URI\" = \"api/test/index.html\"" --> 
