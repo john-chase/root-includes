@@ -1,0 +1,55 @@
+ <!--printenv -->
+<!-- PROD: /home/thearto4/public_html/PROJECTS -->
+<!-- DEV: /Volumes/Chases/theARTofTECH --> 
+<header class="sticky-top"> 
+<!--#if expr="\"$DOCUMENT_ROOT\" = \"/Volumes/Chases/theARTofTECH\"" --> 
+    <img id="logo" src="/site-images/logo-325.png" width="60" height="60" alt="Art of Tech Business logo">
+    <!--#if expr="\"$DOCUMENT_URI\" = \"/PROJECTS/index.html\"" --> 
+    <h1>The Art of Tech Projects 2022</h1>
+    <!--#elif expr="\"$DOCUMENT_URI\" = \"/PROJECTS/api/test/index.html\"" --> 
+    <h1>API Test</h1>
+    <!--#elif expr="\"$DOCUMENT_URI\" = \"/PROJECTS/vue/number-grid/index.html\"" --> 
+    <h1>Magic Number Grid</h1>
+    <!--#elif expr="\"$DOCUMENT_URI\" = \"/PROJECTS/vue/number-grid-no-bg/index.html\"" --> 
+    <h1>Magic Number Grid (Print Version)</h1>
+    <!--#elif expr="\"$DOCUMENT_URI\" = \"/PROJECTS/leaflet/map-gauge/index.html\"" --> 
+    <h1><em>Okeanos Explorer</em> Map/Data</h1>
+    <!--#elif expr="\"$DOCUMENT_URI\" = \"/PROJECTS/node/advanced-search/index.html\"" --> 
+    <h1>Advanced Expedition Search</h1>
+    <!--#endif -->    
+<!--#else -->
+    <img id="logo" src="site-images/logo-325.png" width="60" height="60" alt="Art of Tech Business logo">
+    <!--#if expr="\"$DOCUMENT_URI\" = \"index.html\"" --> 
+    <h1>The Art of Tech Projects 2022</h1>
+    <!--#elif expr="\"$DOCUMENT_URI\" = \"api/test/index.html\"" --> 
+    <h1>API Test</h1>
+    <!--#elif expr="\"$DOCUMENT_URI\" = \"vue/number-grid/index.html\"" --> 
+    <h1>Magic Number Grid</h1>
+    <!--#elif expr="\"$DOCUMENT_URI\" = \"vue/number-grid-no-bg/index.html\"" --> 
+    <h1>Magic Number Grid (Print Version)</h1>
+    <!--#elif expr="\"$DOCUMENT_URI\" = \"leaflet/map-gauge/index.html\"" --> 
+    <h1><em>Okeanos Explorer</em> Map/Data</h1>
+    <!--#endif -->    
+<!--#endif -->
+</header>            
+<div class="bc-div">
+    <ul class="breadcrumbs">
+        <li></li><a href="//theartoftechllc.com">Home</a></li>
+<!--#if expr="\"$DOCUMENT_ROOT\" = \"/Volumes/Chases/theARTofTECH\"" --> 
+    <!--#if expr="\"$DOCUMENT_URI\" = \"/PROJECTS/index.html\"" --> 
+        <li> | Projects</li>
+    <!--#else -->
+        <li> | <a href="/PROJECTS/">Projects</a></li>
+    <!--#endif -->
+<!--#else -->
+    <!--#if expr="\"$DOCUMENT_URI\" = \"/index.html\"" --> 
+    <li> | Projects</li>
+    <!--#else -->
+        <li> | <a href="/">Projects</a></li>
+    <!--#endif -->
+<!--#endif -->    
+<!--#config timefmt="%A - %b %d, %Y" -->
+<!--#set var="modified" value="$LAST_MODIFIED" -->
+        <li style="float:right;margin-right:1rem;">Modified: <!--#echo var="modified" --></li>
+    </ul>
+</div>
